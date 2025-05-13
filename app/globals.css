@@ -1,26 +1,92 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-*: initial;
+  --color-white: rgb(255, 255, 255);
+  --color-black: rgb(0, 0, 0);
+  --color-grey-500: rgb(94, 110, 133);
+  --color-grey-300: rgb(172, 193, 222);
+  --color-blue-900: rgb(37, 51, 71);
+  --color-blue-500: rgb(52, 95, 246);
+  --color-blue-300: rgb(179, 211, 241);
+  --color-blue-100: rgb(225, 231, 254);
+  --color-gradient-1: rgba(214, 252, 254, 0);
+  --color-gradient-2: rgba(214, 230, 254, 1);
+
+  --font-weight-*: initial;
+  --font-weight-regular: 400;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  --text-*: initial;
+  --text-3xl: 4rem;
+  --text-2xl: 3rem;
+  --text-xl: 2rem;
+  --text-lg: 1.5rem;
+  --text-md: 1.25rem;
+  --text-rg: 1rem;
+  --text-sm: 0.875rem;
+
+  --leading-*: initial;
+  --leading-tighter: 110%;
+  --leading-tight: 120%;
+  --leading-normal: 150%;
+
+  --tracking-*: initial;
+  --tracking-normal: 0;
+  --tracking-tight: -5%;
+
+  --spacing-*: initial;
+  --spacing-0: 0;
+  --spacing-100: 0.5rem;
+  --spacing-200: 1rem;
+  --spacing-300: 1.5rem;
+  --spacing-400: 2rem;
+  --spacing-500: 2.5rem;
+  --spacing-600: 3rem;
+  --spacing-700: 3.5rem;
+  --spacing-900: 4.5rem;
+  --spacing-1100: 5.5rem;
+  --spacing-1200: 6rem;
+  --spacing-1300: 6.5rem;
+  --spacing-1600: 8rem;
+  --spacing-1800: 9rem;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+@layer components {
+  .text-preset-1 {
+    @apply text-2xl font-semibold leading-tighter tracking-tight xl:text-3xl;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  .text-preset-2 {
+    @apply text-xl font-semibold leading-tighter tracking-tight xl:text-2xl;
+  }
+
+  .text-preset-3 {
+    @apply text-lg font-semibold leading-tight tracking-tight;
+  }
+
+  .text-preset-4 {
+    @apply text-md font-semibold leading-tight tracking-tight;
+  }
+
+  .text-preset-5 {
+    @apply text-rg font-regular leading-normal tracking-normal;
+  }
+
+  .text-preset-5-semibold {
+    @apply text-rg font-semibold leading-normal tracking-normal;
+  }
+
+  .text-preset-6 {
+    @apply text-sm font-regular leading-normal tracking-normal;
+  }
+
+  .text-preset-6-bold {
+    @apply text-sm font-bold leading-normal tracking-normal;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.gradient {
+  @apply bg-linear-to-r from-gradient-1 to-gradient-2;
 }

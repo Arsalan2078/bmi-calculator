@@ -53,6 +53,16 @@
   --spacing-1800: 9rem;
 }
 
+body {
+  @apply text-grey-500;
+}
+
+h1,
+h2,
+h3 {
+  @apply text-blue-900;
+}
+
 @layer components {
   .text-preset-1 {
     @apply text-2xl font-semibold leading-tighter tracking-tight xl:text-3xl;

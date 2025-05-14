@@ -34,7 +34,7 @@
 
   --tracking-*: initial;
   --tracking-normal: 0;
-  --tracking-tight: -5%;
+  --tracking-tight: -0.05em;
 
   --spacing-*: initial;
   --spacing-0: 0;
@@ -65,19 +65,19 @@ h3 {
 
 @layer components {
   .text-preset-1 {
-    @apply text-2xl font-semibold leading-tighter tracking-tight xl:text-3xl;
+    @apply leading-tighter text-2xl font-semibold tracking-tight xl:text-3xl;
   }
 
   .text-preset-2 {
-    @apply text-xl font-semibold leading-tighter tracking-tight xl:text-2xl;
+    @apply leading-tighter text-xl font-semibold tracking-tight xl:text-2xl;
   }
 
   .text-preset-3 {
-    @apply text-lg font-semibold leading-tight tracking-tight;
+    @apply text-lg leading-tight font-semibold tracking-tight;
   }
 
   .text-preset-4 {
-    @apply text-md font-semibold leading-tight tracking-tight;
+    @apply text-md leading-tight font-semibold tracking-tight;
   }
 
   .text-preset-5 {
@@ -85,18 +85,18 @@ h3 {
   }
 
   .text-preset-5-semibold {
-    @apply text-rg font-semibold leading-normal tracking-normal;
+    @apply text-rg leading-normal font-semibold tracking-normal;
   }
 
   .text-preset-6 {
-    @apply text-sm font-regular leading-normal tracking-normal;
+    @apply font-regular text-sm leading-normal tracking-normal;
   }
 
   .text-preset-6-bold {
-    @apply text-sm font-bold leading-normal tracking-normal;
+    @apply text-sm leading-normal font-bold tracking-normal;
   }
 }
 
 .gradient {
-  @apply bg-linear-to-r from-gradient-1 to-gradient-2;
+  @apply from-gradient-1 to-gradient-2 bg-linear-to-r;
 }

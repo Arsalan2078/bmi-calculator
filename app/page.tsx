@@ -4,11 +4,13 @@ import BMILimitation from "./components/BMILimitation";
 import manEating from "@/public/image-man-eating.webp";
 import CurvedLine from "./components/CurvedLine";
 import BMICalculator from "./components/BMICalculator";
+import Logo from "./components/Logo";
 
 export default function Home() {
   return (
     <>
       <header>
+        <Logo />
         <BMICalculator />
       </header>
 

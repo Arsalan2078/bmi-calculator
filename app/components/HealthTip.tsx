@@ -1,16 +1,11 @@
 import Image from "next/image";
-
-interface HealthTipProps {
-  image: string;
-  title: string;
-  description: string;
-}
+import { CardProps } from "../libs/types";
 
 export default function HealthTip({
   image,
   title = "Health Tip",
   description = "Health tip descripion goes here...",
-}: HealthTipProps) {
+}: CardProps) {
   return (
     <div className="flex flex-col gap-400 md:flex-row md:gap-500 xl:flex-col xl:gap-600">
       <Image src={image} alt="" width={64} height={64} />

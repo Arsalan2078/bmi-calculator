@@ -2,8 +2,7 @@ import Image from "next/image";
 import HealthTip from "./components/HealthTip";
 import BMILimitation from "./components/BMILimitation";
 import manEating from "@/public/image-man-eating.webp";
-import curvedLineRight from "@/public/pattern-curved-line-right.svg";
-import curvedLineLeft from "@/public/pattern-curved-line-left.svg";
+import CurvedLine from "./components/CurvedLine";
 
 export default function Home() {
   return (
@@ -34,9 +33,8 @@ export default function Home() {
               </p>
             </div>
 
-            <Image
-              src={curvedLineLeft}
-              alt=""
+            <CurvedLine
+              direction="left"
               className="absolute top-0 right-700 hidden xl:block"
             />
           </div>
@@ -125,9 +123,8 @@ export default function Home() {
               </li>
             </ul>
 
-            <Image
-              src={curvedLineRight}
-              alt="#"
+            <CurvedLine
+              direction="right"
               className="absolute top-[22rem] left-[13rem] hidden xl:block"
             />
           </div>

@@ -8,8 +8,11 @@ export default function Home() {
   return (
     <main>
       <article>
+        
+
         <section id="health-tips" className="relative">
-          <div className="absolute -z-10 h-full w-full opacity-25 xl:p-[0.625rem]">
+          {/* Transparent background gradient */}
+          <div className="absolute -z-10 h-full w-full xl:left-[-0.875rem] opacity-25 xl:p-[0.625rem]">
             <div className="gradient mx-auto h-full w-full max-w-[80rem] xl:rounded-[2rem]"></div>
           </div>
 

@@ -109,7 +109,7 @@ export default function Home() {
 
           <section id="limitations-of-bmi">
             <div className="relative mx-auto grid max-w-[77.5rem] grid-cols-1 gap-y-700 px-300 pt-1100 pb-1200 md:px-500 xl:grid-cols-12 xl:py-1300">
-              <div className="flex flex-col gap-400 text-center xl:col-span-6 xl:col-start-1 xl:row-start-1 xl:max-w-[35.25rem] xl:text-start">
+              <div className="flex flex-col gap-400 text-center lg:max-w-[35.25rem] lg:text-start xl:col-span-6 xl:col-start-1 xl:row-start-1">
                 <h2 className="text-preset-2">Limitations of BMI</h2>
                 <p>
                   Although BMI is often a practical indicator of healthy weight,
@@ -119,36 +119,41 @@ export default function Home() {
                 </p>
               </div>
 
-              <ul className="grid grid-cols-1 gap-y-200 md:grid-cols-12 md:gap-x-200 md:gap-y-300 xl:col-span-10 xl:col-start-3 xl:row-start-1 xl:grid-cols-10">
-                <li className="md:col-span-6 xl:col-span-4 xl:col-start-6">
+              <CurvedLine
+                direction="right"
+                className="absolute hidden lg:top-[18rem] lg:left-[16rem] lg:block xl:top-[22rem] xl:left-[13rem]"
+              />
+
+              <ul className="grid grid-cols-1 gap-y-200 md:grid-cols-12 md:gap-x-200 md:gap-y-300 lg:grid-cols-10 xl:col-span-10 xl:col-start-3 xl:row-start-1">
+                <li className="md:col-span-6 lg:col-span-4 lg:col-start-6">
                   <BMILimitation
                     image="./icon-gender.svg"
                     title="Gender"
                     description="The development and body fat composition of girls and boys vary with age. Consequently, a child's age and gender are considered when evaluating their BMI."
                   />
                 </li>
-                <li className="md:col-span-6 xl:col-span-4 xl:col-start-3">
+                <li className="md:col-span-6 lg:col-span-4 lg:col-start-3">
                   <BMILimitation
                     image="./icon-age.svg"
                     title="Age"
                     description="In aging individuals, increased body fat and muscle loss may cause BMI to underestimate body fat content."
                   />
                 </li>
-                <li className="md:col-span-6 xl:col-span-4">
+                <li className="md:col-span-6 lg:col-span-4">
                   <BMILimitation
                     image="./icon-muscle.svg"
                     title="Muscle"
                     description="BMI may misclassify muscular individuals as overweight or obese, as it doesn't differentiate muscle from fat."
                   />
                 </li>
-                <li className="md:col-span-6 xl:col-span-4">
+                <li className="md:col-span-6 lg:col-span-4">
                   <BMILimitation
                     image="./icon-pregnancy.svg"
                     title="Pregnancy"
                     description="Expectant mothers experience weight gain due to their growing baby. Maintaining a healthy pre-pregnancy BMI is advisable to minimise health risks for both mother and child."
                   />
                 </li>
-                <li className="md:col-span-6 md:col-start-4 xl:col-span-4">
+                <li className="md:col-span-6 md:col-start-4 lg:col-span-4">
                   <BMILimitation
                     image="./icon-race.svg"
                     title="Race"
@@ -156,11 +161,6 @@ export default function Home() {
                   />
                 </li>
               </ul>
-
-              <CurvedLine
-                direction="right"
-                className="absolute top-[22rem] left-[13rem] hidden xl:block"
-              />
             </div>
           </section>
         </article>

@@ -104,3 +104,7 @@ h3 {
     @apply from-gradient-1 to-gradient-2 bg-linear-to-r;
   }
 }
+
+input {
+  background-color: pink;
+}

@@ -95,8 +95,12 @@ h3 {
   .text-preset-6-bold {
     @apply text-sm leading-normal font-bold tracking-normal;
   }
-}
 
-.gradient {
-  @apply from-gradient-1 to-gradient-2 bg-linear-to-r;
+  .card-shadow {
+    @apply shadow-[1rem_2rem_3.5rem_0] shadow-[rgba(143,174,207,0.25)];
+  }
+
+  .gradient {
+    @apply from-gradient-1 to-gradient-2 bg-linear-to-r;
+  }
 }

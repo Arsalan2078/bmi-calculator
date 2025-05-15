@@ -10,19 +10,43 @@ export default function Home() {
   return (
     <>
       <header>
-        <Logo />
-        <BMICalculator />
+        <div className="relative mx-auto flex max-w-[77.5rem] flex-col gap-400 px-300 pt-400 pb-600 md:px-500 md:py-1100 xl:gap-300">
+          {/* background gradient */}
+          <div className="gradient absolute -z-10 -mx-300 -mt-400 -mb-600 h-[40.625rem] w-full rounded-b-[2rem] md:-mx-500 md:-my-1100 md:h-[40rem] xl:-ml-[8.75rem] xl:h-full xl:max-w-[62.625rem]"></div>
+
+          <div className="self-center xl:self-start">
+            <Logo />
+          </div>
+
+          <div className="flex flex-col gap-400 xl:flex-row">
+            <div className="xl:flex-1">
+              <div className="flex flex-col gap-300 text-center xl:max-w-[29.0625rem] xl:gap-400 xl:pt-900 xl:text-start">
+                <h1 className="text-preset-1">Body Mass Index Calculator</h1>
+                <p>
+                  Better understand your weight in relation to your height using
+                  our body mass index (BM) calculator. While BMI is not the sole
+                  determinant of a healthy weight, it offers a valuable starting
+                  point to evaluate your overall health and well-being.
+                </p>
+              </div>
+            </div>
+
+            <div className="xl:flex-1">
+              <BMICalculator />
+            </div>
+          </div>
+        </div>
       </header>
 
       <main>
         <article>
           <section id="bmi-meaning">
-            <div className="relative mx-auto box-content flex max-w-[72.5rem] flex-col gap-600 pb-600 md:flex-row md:items-center md:gap-900 md:pr-500 xl:items-end xl:gap-[8rem] xl:px-500">
+            <div className="relative mx-auto flex max-w-[77.5rem] flex-col gap-600 pb-600 md:flex-row md:items-center md:gap-900 md:pr-500 xl:items-end xl:gap-[8rem] xl:px-500">
               <div className="mx-auto md:mx-0 md:ml-[-7rem] md:flex-[1.25] xl:ml-0 xl:flex-[1.206] xl:pt-[3.25rem]">
                 <Image
                   src={manEating}
                   alt="A photo of a man eating sushi."
-                  className="w-full max-w-[30rem]"
+                  className="w-full max-w-[30rem] xl:max-w-none"
                   quality={100}
                   priority
                 />
@@ -54,7 +78,7 @@ export default function Home() {
               <div className="gradient mx-auto h-full w-full max-w-[80rem] xl:rounded-[2rem]"></div>
             </div>
 
-            <div className="mx-auto box-content max-w-[72.5rem] px-300 py-600 md:px-500 md:py-[3.125rem] xl:py-1200">
+            <div className="mx-auto max-w-[77.5rem] px-300 py-600 md:px-500 md:py-[3.125rem] xl:py-1200">
               <ul className="flex flex-col gap-500 xl:flex-row xl:gap-400">
                 <li>
                   <HealthTip
@@ -82,7 +106,7 @@ export default function Home() {
           </section>
 
           <section id="limitations-of-bmi">
-            <div className="relative mx-auto box-content grid max-w-[72.5rem] grid-cols-1 gap-y-700 px-300 pt-1100 pb-1200 md:px-500 xl:grid-cols-12 xl:py-1300">
+            <div className="relative mx-auto grid max-w-[77.5rem] grid-cols-1 gap-y-700 px-300 pt-1100 pb-1200 md:px-500 xl:grid-cols-12 xl:py-1300">
               <div className="flex flex-col gap-400 text-center xl:col-span-6 xl:col-start-1 xl:row-start-1 xl:max-w-[35.25rem] xl:text-start">
                 <h2 className="text-preset-2">Limitations of BMI</h2>
                 <p>

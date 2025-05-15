@@ -12,7 +12,9 @@ export default function Home() {
       <header>
         <div className="relative mx-auto flex max-w-[77.5rem] flex-col gap-400 px-300 pt-400 pb-600 md:px-500 md:py-1100 xl:gap-300">
           {/* background gradient */}
-          <div className="gradient absolute -z-10 -mx-300 -mt-400 -mb-600 h-[40.625rem] w-full rounded-b-[2rem] md:-mx-500 md:-my-1100 md:h-[40rem] xl:-ml-[8.75rem] xl:h-full xl:max-w-[62.625rem]"></div>
+          <div className="absolute -z-10 -mx-300 -mt-400 -mb-600 h-[40.625rem] w-full md:-mx-500 md:-my-1100 md:h-[40rem] xl:-ml-[8.75rem] xl:h-full">
+            <div className="gradient h-full w-full rounded-b-[2rem] xl:max-w-[62.625rem]"></div>
+          </div>
 
           <div className="self-center xl:self-start">
             <Logo />
@@ -74,8 +76,8 @@ export default function Home() {
 
           <section id="health-tips" className="relative">
             {/* Transparent background gradient */}
-            <div className="absolute -z-10 h-full w-full opacity-25 xl:left-[-0.875rem] xl:p-[0.625rem]">
-              <div className="gradient mx-auto h-full w-full max-w-[80rem] xl:rounded-[2rem]"></div>
+            <div className="absolute -z-10 h-full w-full xl:left-[-0.875rem] xl:p-[0.625rem]">
+              <div className="gradient mx-auto h-full w-full max-w-[80rem] opacity-25 xl:rounded-[2rem]"></div>
             </div>
 
             <div className="mx-auto max-w-[77.5rem] px-300 py-600 md:px-500 md:py-[3.125rem] xl:py-1200">
